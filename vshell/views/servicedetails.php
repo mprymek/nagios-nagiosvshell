@@ -62,7 +62,7 @@ function get_service_details($dets)
 	<h4><em>".gettext('Service').": </em>{$dets['Service']}</h4>
 	<h4><em>".gettext('Host').": </em><a href='index.php?type=hostdetail&name_filter={$dets['Host']}' title='".gettext('Host Details')."'>{$dets['Host']}</a></h4>
 	<h5><em>".gettext('Member of').": </em>{$dets['MemberOf']}</h5>
-	<h6><em><a href='index.php?type=services&host_filter={$dets['Host']}' title='".gettext('See All Services For This Host')."'>".gettext('See All Services For This Host')."</a></h6>
+	<h6><em><a href='index.php?type=services&host_filter={$dets['Host']}' title='".gettext('See All Services For This Host')."'>".gettext('See All Services For This Host')."</a></em></h6>
 	
 	<div class='detailcontainer'>
 	<fieldset class='servicedetails'>
@@ -124,7 +124,7 @@ function get_service_details($dets)
 		<tr><td><a href='{$dets['CmdCustomNotification']}' title='".gettext('Send Custom Notification')."'><img src='views/images/notification.gif' class='iconLink' height='12' width='12' alt='Notification' /></a></td><td>".gettext('Send custom notification')."</td></tr>
 		<tr><td><a href='{$dets['CmdScheduleDowntime']}' title='".gettext('Schedule Downtime')."'><img src='views/images/downtime.png' class='iconLink' height='12' width='12' alt='Downtime' /></a></td><td>".gettext('Schedule downtime')."</td></tr>
 		<tr><td><a href='{$dets['CmdScheduleChecks']}' title='".gettext('Schedule Check')."'><img src='views/images/schedulecheck.png' class='iconLink' height='12' width='12' alt='Schedule' /></a></td><td>".gettext('Reschedule Next Check')."</td></tr>
-		<tr><td><a href='{$dets['CmdAcknowledge']}' title='{$dets['AckTitle']}'><img src='views/images/ack.png' class='iconLink' height='12' width='12' alt='Acknowledge' /></a></td><td>{$dets['AckTitle']}</td></tr>
+		<tr><td><a href='{$dets['CmdAcknowledge']}' title='{$dets['AckTitle']}'><img src='views/images/ack.gif' class='iconLink' height='12' width='12' alt='Acknowledge' /></a></td><td>{$dets['AckTitle']}</td></tr>
 		<tr><td colspan='2'><a class='label' href='{$dets['CoreLink']}' title='".gettext('See This Service In Nagios Core')."'>".gettext('See This Service In Nagios Core')."</a></td></tr>
 		</table>
 		</fieldset>"; //end if authorized for commands 

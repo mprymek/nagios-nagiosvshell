@@ -61,9 +61,9 @@ function display_services($services,$start,$limit)
 	$name_filter = isset($_GET['name_filter']) ? $_GET['name_filter'] : '';
 
 	//VIEW / html output 
-	$page=''; 
 	$st = services_table(get_tac_data()); //tac Summary table
-	$page .= "<div class='tacTable'>$st</div>\n"; 
+	//$page .= "<div class='tacTable'>$st</div>\n"; 
+	$page .= $st; 
 	
 	$page .="<div class='tableOptsWrapper'>\n";
 	//check if more than one page is needed 
@@ -79,7 +79,7 @@ function display_services($services,$start,$limit)
 	<table class="servicetable"><tr> 
 	<th class="hostname">'.gettext('Host Name').'</th>
 	<th class="service_description">'.gettext('Service').'</th>
-	<th class="status">'.gettext('Status').'</th>
+	<!--<th class="status">'.gettext('Status').'</th>-->
 	<th class="duration">'.gettext('Duration').'</th>
 	<th class="attempt">'.gettext('Attempt').'</th>
 	<th class="last_check">'.gettext('Last Check').'</th>
@@ -130,8 +130,8 @@ function display_services($services,$start,$limit)
 		
 		<tr class='statustablerow'>	
 			{$td1}
-			<td class='service_description'><div class='service_description'><a href="{$url}">{$services[$i]['service_description']}</a> $serviceicons </div></td>
-			<td class="{$tr}">{$services[$i]['current_state']}</td>
+			<td class='service_description {$tr}'><div class='service_description'><a href="{$url}">{$services[$i]['service_description']}</a> $serviceicons </div></td>
+			<!--<td class="status {$tr}">{$services[$i]['current_state']}</td>-->
 			<td class='duration'>{$services[$i]['duration']}</td>
 			<td class='attempt'>{$services[$i]['attempt']}</td>
 			<td class='last_check'>{$services[$i]['last_check']}</td>

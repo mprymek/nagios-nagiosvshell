@@ -91,14 +91,18 @@ $(document).ready(function() {
 
 </head>
 <body>
-	<div id="logoDiv"><a href="index.php"><img src="views/images/vshell.png" /></a></div>
+	<!--<div id="logoDiv"><a href="index.php"><img src="views/images/vshell.png" /></a></div>
 	<div class="corelink">
 		<a class="label" href="'.$coreurl.'" target="_blank" title="'.gettext('Access Nagios Core').'">'.gettext('Access Nagios Core').'</a>
 	</div>
+   -->
 	'.clear_cache_link().'
 
 	<div class="topnav">
 		'.$navlinks.'
+		<a style="float:right; margin-right:1em;" class="nav" href="'.$coreurl.'" target="_blank" title="'.gettext('Access Nagios Core').'">Core</a>
+		<a style="float:right; margin-right:1em;" class="nav" href="/c4n" target="_blank">Cubism</a>
+
 	</div>
 
 

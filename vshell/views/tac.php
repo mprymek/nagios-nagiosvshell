@@ -160,7 +160,7 @@ function services_table($tac_data)
 	$services_table = "
 <!-- ######################SERVICES TABLE##################### -->
 <table class='tac'>
-<tr><th>".gettext('Services')."</th></tr>
+<tr><th colspan='5'>".gettext('Services')."</th></tr>
 	
   <tr>
 	   <td class='ok'><a class='highlight' href='{$tac_data['servlink']}OK'><div class='td'>{$tac_data['servicesOkTotal']} ".gettext('Ok')."</div></a></td>

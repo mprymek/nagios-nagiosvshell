@@ -86,7 +86,7 @@ function fetch_host_icons($hostname)
 	$icons .= ($host['notifications_enabled'] == 1) ? '' : '<img src="views/images/nonotifications.png" title="'.gettext('Notifications Disabled').'" class="tableIcon" alt="NO NTF" height="12" width="12" />'; //notifications enabled?  
 	$icons .= ($host['is_flapping']) == 0 ? '' : '<img src="views/images/flapping.png" title="'.gettext('State Is Flapping').'" class="tableIcon" alt="FLAP" height="12" width="12" />'; //is flapping 
 	$icons .= ($host['active_checks_enabled']==0 && $host['passive_checks_enabled']==1) ? '<img src="views/images/passive.png" title="'.gettext('Passive Checks Enabled').'" class="tableIcon" alt="PC" height="12" width="12" />' : ''; //passive host 
-	$icons .= ($host['current_state'] != 0 && $host['problem_has_been_acknowledged'] > 0) ? '<img src="views/images/ack.png" title="'.gettext('Problem Has Been Acknowledged').'" class="tableIcon" alt="ACK" height="12" width="12" />' : ''; //acknowledged problem  
+	$icons .= ($host['current_state'] != 0 && $host['problem_has_been_acknowledged'] > 0) ? '<img src="views/images/ack.gif" title="'.gettext('Problem Has Been Acknowledged').'" class="tableIcon" alt="ACK"  />' : ''; //acknowledged problem  
 	
 	return $icons;
 }
@@ -127,7 +127,7 @@ function fetch_service_icons($service_id)
 	$icons .= ($service['notifications_enabled'] == 1) ? '' : '<img src="views/images/nonotifications.png" title="'.gettext('Notifications Disabled').'" class="tableIcon" alt="NO NTF" height="12" width="12" />'; //notifications enabled?  
 	$icons .= ($service['is_flapping']) == 0 ? '' : '<img src="views/images/flapping.png" title="'.gettext('State Is Flapping').'" class="tableIcon" alt="FLAP" height="12" width="12" />'; //is flapping 
 	$icons .= ($service['active_checks_enabled']==0 && $service['passive_checks_enabled']==1) ? '<img src="views/images/passive.png" title="'.gettext('Passive Checks Enabled').'" class="tableIcon" alt="PC" height="12" width="12" />' : ''; //passive host 
-	$icons .= ($service['current_state'] != 0 && $service['problem_has_been_acknowledged'] > 0) ? '<img src="views/images/ack.png" title="'.gettext('Problem Has Been Acknowledged').'" class="tableIcon" alt="ACK" height="12" width="12" />' : ''; //acknowledged problem  
+	$icons .= ($service['current_state'] != 0 && $service['problem_has_been_acknowledged'] > 0) ? '<img src="views/images/ack.gif" title="'.gettext('Problem Has Been Acknowledged').'" class="tableIcon" alt="ACK"  />' : ''; //acknowledged problem  
 	
 	return $icons;
 }
